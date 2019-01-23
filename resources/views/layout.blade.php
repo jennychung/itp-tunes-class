@@ -6,7 +6,7 @@
   <!-- yay! -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
-<body>
+<body style="margin:10%">
   @yield('main')
   <!-- this is now dynamic -->
 </body>
