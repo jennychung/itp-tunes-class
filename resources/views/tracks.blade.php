@@ -1,6 +1,14 @@
 @extends('layout')
 @section('title', 'Tracks')
+<!-- @section('navbar') -->
 @section ('main')
+
+
+<div style="text-align:center; margin-bottom:80px;">
+<button type="submit" class="btn btn-light btn-block" >
+<a href="/tracks/new">Add a Playlist </a>
+</button>
+</div>
 
 <h1 style="text-align:center; padding-bottom: 20px;"> {{$name}} </h1>
 
@@ -27,6 +35,9 @@
          <td>
            {{$genre->unitPrice}}
          </td>
+         <!-- <td>
+           {{$genre->genreName}}
+         </td> -->
        </tr>
        @empty
        <tr>
@@ -35,3 +46,5 @@
      @endforelse
 
 </table>
+
+@endsection
