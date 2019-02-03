@@ -61,8 +61,11 @@ class GenresController extends Controller
     if ($validation->fails()){
       // $a = "'/genres/' + {{$genre->GenreId}}+ '/edit'";
       // $a = '/genres/'+ $request->genreId + '/edit';
-      return back()
-      // redirect("/genres")
+      return redirect()->back()
+        // $a= (int)$request->genreId;
+      // redirect()
+      // ->route('genres', ['id'=> $request->genreId],'edit')
+      // ->action('GenresController@show', ['id'=> 4])
       ->withInput() //can also print out errors with input.
       ->withErrors($validation); //prints out errors compared with validation.
     }
