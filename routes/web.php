@@ -18,7 +18,8 @@ Route::get('/invoices', 'InvoicesController@index');
 //WEEK3 HOMEWORK
 Route::get('/genres', 'GenresController@index');
 Route::get('/genres/edit', 'GenresController@create');
-Route::get('/genres/{id}/edit', 'GenresController@show');
+// Route::get('/genres/{id}/edit', 'GenresController@show');
+Route::get('/genres/{id}/edit', ['as'=>'genres', 'uses'=>'GenresController@show']);
 // Route::get('/genres/{id}/edit', 'GenresController@index');
 Route::post('/genres', 'GenresController@store');
 
