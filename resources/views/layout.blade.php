@@ -12,8 +12,22 @@
 /* position: absolute; top:20px; */
 ">
 <nav class="navbar navbar-expand-lg navbar-light" style="letter-spacing: 2px;">
-      <a class="nav-link"  href="/genres">GENRES</a>
-      <a class="nav-link" href="/tracks">TRACKS</a>
+
+  @if (Auth::check())
+  <a class="nav-link"  href="/genres">GENRES</a>
+  <a class="nav-link" href="/tracks">TRACKS</a>
+  <a class="nav-link"  href="/invoices">INVOICES</a>
+  <a class="nav-link"  href="/profile">PROFILE</a>
+  <a class="nav-link"  href="/settings">SETTINGS</a>
+  <a class="nav-link"  href="/logout">Logout</a>
+  @else
+  <a class="nav-link"  href="/login">Login</a>
+  <a class="nav-link"  href="/signup">Sign Up</a>
+  @endif
+
+
+
+
 </nav>
 </div>
 
