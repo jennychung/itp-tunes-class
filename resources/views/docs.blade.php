@@ -26,7 +26,9 @@
 
   <script type="text/javascript">
 
-  let connection = new WebSocket('ws://localhost:8080');
+  let connection = new WebSocket('ws://jchung-websocket.herokuapp.com');
+  // let connection = new WebSocket('ws://localhost:8080');
+
 
   connection.onopen = () => {
     console.log('connected from front end');
