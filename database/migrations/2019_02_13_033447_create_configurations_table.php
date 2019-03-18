@@ -28,6 +28,6 @@ class CreateConfigurationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('configurations');
+        Schema:dropIfExists('configurations');
     }
 }

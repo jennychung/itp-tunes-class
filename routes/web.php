@@ -11,7 +11,7 @@
 |
 */
 
-
+  Route::get('/docs', 'WebSockets@index');
 
 Route::get('/login', 'LoginController@index');
 Route::post('/login', 'LoginController@login');
@@ -22,6 +22,7 @@ Route::middleware(['authenticated'])->group(function() {
   Route::get('/settings', 'ConfigurationsController@index');
   Route::get('/settings', 'ConfigurationsController@configure');
   Route::post('/settings', 'ConfigurationsController@settings');
+  Route::post('/newUser', 'newUserController@settings');
 }); //doesn't correspond to class name but maps and runs handle function before route of profile
 
   Route::get('/maintenance', 'MaintenanceController@index');
@@ -58,6 +59,7 @@ Route::middleware(['maintenanceMode'])->group(function() {
 
   Route::get('/signup', 'SignUpController@index');
   Route::post('/signup', 'SignUpController@signup');
+
 
 
 
